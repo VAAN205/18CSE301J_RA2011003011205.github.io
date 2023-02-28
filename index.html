@@ -1,9 +1,27 @@
+<!DOCTYPE html>
 <html>
-
-<body>
-  <h1>ARYAN VATS</h1>
-  <p>Hey! How are you doing today?</p>
-  <img src="https://content.codecademy.com/articles/github-pages-via-web-app/happy-ice-cream.gif" />
-</body>
-
+  <head>
+    <title>My Tableau Embedded Dashboard</title>
+  </head>
+  <body>
+    <div class='tableauPlaceholder' id='tableauViz'></div>
+    <script type='text/javascript' src='https://public.tableau.com/javascripts/api/tableau-2.min.js'></script>
+    <script type='text/javascript'>
+      var divElement = document.getElementById('tableauViz');
+      var vizElement = divElement.getElementsByTagName('object')[0];
+      if (divElement.offsetWidth > 800) {
+        vizElement.style.width='100%';
+        vizElement.style.height=(divElement.offsetWidth*0.75)+'px';
+      } else if (divElement.offsetWidth > 500) {
+        vizElement.style.width='100%';
+        vizElement.style.height=(divElement.offsetWidth*0.75)+'px';
+      } else {
+        vizElement.style.width='100%';
+        vizElement.style.height='1277px';
+      }
+      var scriptElement = document.createElement('script');
+      scriptElement.src = 'https://public.tableau.com/views/GlobalTerrorismAnalysis_16775613879950/Dashboard2?:language=en-GB&:display_count=n&:origin=viz_share_link?:showVizHome=no&:embed=true';
+      vizElement.parentNode.insertBefore(scriptElement, vizElement);
+    </script>
+  </body>
 </html>
